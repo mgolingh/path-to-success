@@ -72,18 +72,57 @@ table {
 
 
 /*----------GLOBAL STYLES (mobile first/small)----------*/
+
 body{
     min-width:450px;
     background-color: var(--Purple);
 }
 
+main {
+    justify-content: center;
+    box-sizing: border-box;
+    
+    padding: 2px;
+    border-radius: 10 10 10 10;
+}
+
 header{
+    display:block;
+    gap:1rem;
+    justify-content: center;
+    align-items: center;
     position:relative;
-    z-index:0;
+    top:0;
     background-color:var(--Lavender);
     border-radius:0 0 20px 20px;
     padding:10px;
+    }
+
+header p{
+    display:block;
+    position: relative;
+    top:-20;
+    justify-content: center;
     
+    background-color: var(--Pink);
+    border:0 0 75 0;
+    border-radius: 0.0.20 20;
+}
+
+nav{
+    display:flex;
+    flex-direction: row;
+    background-color: var(--Yellow);
+    border-radius:0 0 20 20;
+    padding:.5em;   
+    position: fixed;
+    top:0px;
+    right:3px;    
+}
+
+nav ul{
+    display:flex;
+    flex-direction: row;
 }
 
 h1{
@@ -93,40 +132,126 @@ h1{
     color:var(--White)
 }
 
+h2{
+    font-size: 2em;
+    color:var(--White);
+}
+  
+h3{
+    font-size: 1.5em;
+    color:var(--Yellow);
+}
+
+h4{
+    font-size: 1.15em;
+    color:var(--Purple);
+}
+
+
 p{
     font-family: var(--font-family);
 }
 
-header p{
-    position:relative;
-    background-color:var(--Pink);
-    border-radius:0 0 30 30;
-    padding:10px;
-    text-align: center;
-    z-index:1;
-    font-variant: italic;
-}
-
-nav ul{
+.ourServices{
     display:flex;
-    justify-content: space-evenly;
-    background-color: var(--Yellow);
-    border-radius:0 0 20 20;
+    flex-direction: column;
+    align-items: flex-start;
+    margin:2em;
+    }
+
+.oneOnone{
+    background-color: var(--White);
+    padding-top:10px;
+    border-radius: 20 20 20 20;
+    margin-bottom: 20px;
+ }
+
+ .oneOnone h3{
+    padding-bottom: 1em;
+    align-self: auto;
+ }
+
+.careerCoaching{
+    background-color: var(--White);
     padding:1em;
+    border-radius: 20 20 20 20;
+    margin-bottom: 20px;
 }
 
-nav li{
+.relationshipCoaching{
+    background-color: var(--White);
+    padding:1em;
+    border-radius:20 20 20 20;
+    margin-bottom: 20px;
+}
+
+.groupCoaching{
     display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    margin:2em;
 }
 
-nav h2{
-    font-family: var(--h2);
-    font-size: 1.5em;
+.groupCoaching h3{
+    padding-bottom: 1em;
+    align-self: auto;
 }
 
-.ourServices+h2{
-    font-size: 2em;
+.supportCommunity{
+    background-color: var(--White);
+    padding:1em;
+    border-radius: 20 20 20 20;
+    margin-bottom: 20px;
 }
 
+.focusSessions{
+    background-color: var(--White);
+    padding:1em;
+    border-radius: 20 20 20 20;
+    margin-bottom: 20px;
+}
+
+.workShops{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    margin:2em;
+}
+
+.workShops h3{
+    padding-bottom: 1em;
+    align-self: auto;
+}
+
+.interactive{
+    background-color: var(--White);
+    padding:1em;
+    border-radius: 20 20 20 20;
+    margin-bottom: 20px;
+}
+
+.onlineCourses{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    margin:2em;
+}
+
+.onlineCourses h3{
+    padding-bottom: 1em;
+    align-self: auto;
+}
+
+.flexLearning{
+    background-color: var(--White);
+    padding:1em;
+    border-radius: 20 20 20 20;
+    margin-bottom: 20px;
+}
+
+.whyChoose{
+    background-color:var(--Pink);
+}
