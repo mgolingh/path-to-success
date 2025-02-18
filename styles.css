@@ -55,11 +55,11 @@ table {
 	--font-size: 1.25em;
 
 	--font-heading: "kavoon";
-	--h1:3em;
-	--NAV: h2:1.5em;
-    --h2:2em;
-	--h3: 1.5em;
-	--h4:1.15em;
+	--h1-size:3em;
+	--NAV-h2:1.5em;
+    --h2-size:2em;
+	--h3-size: 1.5em;
+	--h4-size:1.15em;
 
 	--Teal: #4CA7C0;
 	--Purple: #484FB7;
@@ -73,16 +73,54 @@ table {
 
 /*----------GLOBAL STYLES (mobile first/small)----------*/
 
+h1{
+    font-family:var(--font-heading);
+    text-align: center;
+    font-size: var(--h1);
+    color:var(--White)
+}
+
+h2{
+    font-family:var(--font-heading);
+    font-size: 2em;
+    font-weight: bold;
+    color:var(--White);
+}
+  
+h3{
+    font-family: var(--font-family);
+    font-size: var(--h3-size);
+    font-weight: bold;
+    color:var(--Yellow);
+}
+
+h4{
+    font-family:var(--font-family);
+    font-size: 1.15em;
+    color:var(--Purple);
+    font-family: var(--font-family);
+    font-weight: bold;
+}
+
+
+p{
+    font-family: var(--font-family);
+}
+
+/*----------Small Start----------*/
+
 body{
     min-width:450px;
     background-color: var(--Purple);
 }
 
 main {
-    justify-content: auto;
+    justify-content:center;
   
   
 }
+
+/*----------Small Header/Nav Block----------*/
 
 header{
     display:block;
@@ -102,8 +140,9 @@ header h1 + p{
     top:100%;
     left: 5%;
     z-index: -1;
+    font-style: italic;
     text-align:center;
-  
+    color:var(--White);
     padding:1em;
     background-color: var(--Pink);
     border-radius: 0 0 20px 20px;
@@ -130,42 +169,11 @@ nav a hover{
     color:var(--White);
  }
 
-
-
 nav>ul{
     display:none;
-   
 }
 
-h1{
-    font-family:var(--font-heading);
-    text-align: center;
-    font-size: var(--h1);
-    color:var(--White)
-}
-
-h2{
-    font-size: 2em;
-    color:var(--White);
-}
-  
-h3{
-    font-size: 1.5em;
-    color:var(--Yellow);
-}
-
-h4{
-    font-size: 1.15em;
-    color:var(--Purple);
-    font-family: var(--font-family);
-    font-weight: bold;
-
-}
-
-
-p{
-    font-family: var(--font-family);
-}
+/*----------Small Services Block----------*/
 
 .ourServices{
     display:flex;
@@ -173,7 +181,7 @@ p{
     align-items: flex-start;
     margin:2em;
     margin-top:3em;
-    }
+}
 
 .oneOnone{
     background-color: var(--White);
@@ -271,12 +279,12 @@ p{
     margin-bottom: 20px;
 }
 
+/*----------Small Choice Block----------*/
 
 .whyChoose{
     display:table-row;
     background-color:var(--Pink);
     padding:2em;
-    
 } 
 
 .whyChoose h2{
@@ -290,7 +298,7 @@ p{
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     background-color:var(--Pink);
-    padding:10;
+    padding:10px;
     font-family: var(--font-family);
     font-weight: bold;
 }
@@ -299,23 +307,22 @@ p{
 #pa{
     float:left;
     box-sizing:border-box;
-    width:200px;
+    width:175px;
     height:100px;
     background-color:var(--Teal);
     padding:20px;
-    margin-left:1em;
+    margin-left:2em;
     margin-bottom: 1em;
     border-radius: 20px;
     gap:5px;
-        
 }
 
 #pr{
     float:right;
     box-sizing:border-box;
-    width:200px;
+    width:175px;
     height:100px;
-    margin-right:1em;
+    margin-right:2em;
     margin-bottom: 1em;
     background-color: var(--Lavender);
     padding:20px;
@@ -325,9 +332,9 @@ p{
 #su{
     float:left;
     box-sizing:border-box;
-    width:200px;
+    width:175px;
     height:100px;
-    margin-left:1em;
+    margin-left:2em;
     margin-bottom: 1em;
     background-color: var(--Yellow);
     padding:20px;
@@ -337,20 +344,21 @@ p{
 #fl{
     float:right;
     box-sizing:border-box;
-    width:200px;
+    width:175px;
     height:100px;
-    margin-right:1em;
+    margin-right:2em;
     margin-bottom: 1em;
     background-color: var(--White);
     padding:20px;
     border-radius: 20px;
 }
 
+/*----------Small Prices Block----------*/
+
 .priCes{
     
     padding:5px;
     padding-left:1em;
- 
 }
 
 .priCes h2{
@@ -377,7 +385,6 @@ table{
 tbody,thead{
    margin:auto;
    font-family: var(--font-family);
-
 }
 
 th{
@@ -396,6 +403,8 @@ td{
     border:2px solid var(--Yellow);
     text-align: center;
 }
+
+/*----------Small Steps Block----------*/
 
 .firstStep{
     background-color: var(--Pink);
@@ -424,25 +433,242 @@ td{
     border-radius: 10px;
     text-decoration: none;
     width:50%;
+}
+
+/*----------Small Footer Block----------*/
+
+footer{
+    background-color:var(--Lavender);
+    padding: 15px ;
+    display:flex;
+    justify-content:space-evenly;
+    border-radius: 0 0 20px 20px;
+    width:100%;
+}
+
+small{
+    color:var(--White);
+}
+
+small a{
+    color:var(--White);
+    text-decoration:none;
+}
+
+/*----------Med Media Query----------*/
+/*----------_______________----------*/
+
+@media (min-width:620px){
+
+    /*----------Med Services Block----------*/
+
+    .ourServices{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
     }
 
-    footer{
-        background-color:var(--Lavender);
-        padding: 15px ;
-        display:flex;
+    .ourServices h2{
+        margin:10px;
+    }
+
+    .ourServices h3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-left: 0.5em;
+        padding-bottom:1em;
+    }
+
+
+
+    .oneOnone{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        box-sizing:border-box;
+        width:250px;
+        height:325px;
+        margin-left:1em;
+        margin-bottom: 1em;
+        background-color: var(--White);
+        padding:20px;
+        border-radius: 20px;
+}
+
+    .careerCoaching{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        box-sizing:border-box;
+        width:250px;
+        height:325px;
+        margin-left:1em;
+        margin-bottom: 2em;
+        background-color: var(--White);
+        padding:20px;
+        border-radius: 20px;
+    }
+
+    .relationshipCoaching{
+        grid-column:1/span 3;
+        box-sizing:border-box;
+        width:540px;
+        height:200px;
+        margin-left:1em;
+        margin-bottom: 1em;
+        background-color: var(--White);
+        padding:20px;
+        border-radius: 20px;
+    }
         
-        justify-content:space-evenly;
-        border-radius: 0 0 20px 20px;
-        width:100%;
-      
+    .groupCoaching{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+    }
+    
+    .groupCoaching h3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-left: 0.5em;
+        padding-bottom:1em;
     }
 
-    small{
-        color:var(--White);
+    .supportCommunity{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        box-sizing:border-box;
+        width:250px;
+        height:325px;
+        margin-left:1em;
+        margin-bottom: 1em;
+        background-color: var(--White);
+        padding:20px;
+        border-radius: 20px;
+}
+
+    .focusSessions{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        box-sizing:border-box;
+        width:250px;
+        height:325px;
+        margin-left:1em;
+        margin-bottom: 2em;
+        background-color: var(--White);
+        padding:20px;
+        border-radius: 20px;
     }
 
-    small a{
-        color:var(--White);
-        text-decoration:none;
+    .workShops{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
     }
+
+    .workShops h3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-left: 0.5em;
+        padding-bottom:1em;
+    }
+
+
+    .interactive{
+        grid-column:1/span 3;
+        box-sizing:border-box;
+        width:540px;
+        height:230px;
+        margin-left:1em;
+        margin-bottom: 1em;
+        background-color: var(--White);
+        padding:20px;
+        border-radius: 20px;
+    }
+
+    .onlineCourses h3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-left: 0.5em;
+        padding-bottom:1em;
+    }
+
+
+    .flexLearning{
+        grid-column:1/span 3;
+        box-sizing:border-box;
+        width:540px;
+        height:230px;
+        margin-left:1em;
+        margin-bottom: 1em;
+        background-color: var(--White);
+        padding:20px;
+        border-radius: 20px;
+    }
+
+    /*----------Med Why Choose us Block----------*/
+
+    .whyChoose{
+        display:grid;
+        grid-template-columns: 2fr 1fr 2fr 1fr;
+        align-content: space-between;
+        
+    }
+
+    .whyChoose h2{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        
+    }
+
+
+    .whyChoose ul{
+        background-color:var(--Pink);
+        font-family: var(--font-family);
+        font-weight: bold;
+    }
+    
+    
+    #pa{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width:150px;
+        height:75;
+        box-sizing:border-box;
+        background-color:var(--Teal);
+        border-radius: 20px;
+        
+    }
+    
+    #pr{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width:100px;
+        height:75px;
+        box-sizing:border-box;
+        background-color: var(--Lavender);
+        border-radius: 20px;
+    }
+    
+    #su{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        width:150px;
+        height:75;
+        box-sizing:border-box;
+        background-color: var(--Yellow);
+        border-radius: 20px;
+    }
+    
+    #fl{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        width:100px;
+        height:75px;
+        box-sizing:border-box;
+        background-color: var(--White);
+        border-radius: 20px;
+    }
+
+}
+
+
 
