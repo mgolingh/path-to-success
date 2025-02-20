@@ -174,12 +174,20 @@ nav>ul{
 /*----------Small Services Block----------*/
 
 .ourServices{
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin:2em;
-    margin-top:3em;
+    display:grid;
+    grid-template-columns: 1fr;
+    padding:1em;
+    margin-top:2em;
 }
+
+.ourServices h2{
+    margin-top:2em;
+}
+
+.ourServices h3{
+    margin-top:0.5em;
+    margin-bottom: 0.5em;
+ }
 
 .oneOnone{
     background-color: var(--White);
@@ -189,12 +197,7 @@ nav>ul{
     margin-bottom: 20px;
  }
 
- .oneOnone h3{
-    padding-bottom: 1em;
-    align-self: auto;
- }
-
-
+ 
 
 .careerCoaching{
     background-color: var(--White);
@@ -211,11 +214,9 @@ nav>ul{
 }
 
 .groupCoaching{
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-    margin:2em;
+    display:grid;
+    grid-template-columns: 1fr;
+    padding:1em;
 }
 
 .groupCoaching h3{
@@ -238,11 +239,9 @@ nav>ul{
 }
 
 .workShops{
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-    margin:2em;
+    display:grid;
+    grid-template-columns: 1fr;
+    padding:1em;
 }
 
 .workShops h3{
@@ -254,15 +253,14 @@ nav>ul{
     background-color: var(--White);
     padding:1em;
     border-radius: 20px 20px 20px 20px;
-    margin-bottom: 20px;
+   
 }
 
 .onlineCourses{
-    display:flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-    margin:2em;
+    display:grid;
+    grid-template-columns: 1fr;
+    padding:1em;
+    
 }
 
 .onlineCourses h3{
@@ -274,7 +272,7 @@ nav>ul{
     background-color: var(--White);
     padding:1em;
     border-radius: 20px 20px 20px 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /*----------Small Choice Block----------*/
@@ -335,15 +333,10 @@ nav>ul{
 
 /*----------Small Prices Block----------*/
 
-.priCes{
-    
-    padding:5px;
-    
-}
+
 
 .priCes h2{
-    grid-column-start:1;
-    grid-column-end:2;
+    
     font-family: var(--font-heading);
     padding:.5em;
 }
@@ -355,22 +348,20 @@ nav>ul{
 }
 
 table{
-    margin-left:6rem;
+   margin-left: 6em;
     border:2px solid var(--Yellow);
     width:50%;
     background-color: var(--White);
-    padding:1rem;
+    margin-bottom: 1em;
 }
 
 tbody,thead{
-   margin:auto;
    font-family: var(--font-family);
 }
 
 th{
+   
     font-weight: bold;
-    grid-column-start:1;
-    grid-column-end:2;
     background-color: var(--Yellow);
     padding:1em;
     width:50%;
@@ -378,10 +369,9 @@ th{
 }
 
 td{
-    grid-column-start:2;
-    grid-column-end:3;
     border:2px solid var(--Yellow);
     text-align: center;
+    padding:.25em;
 }
 
 /*----------Small Steps Block----------*/
@@ -390,12 +380,13 @@ td{
     background-color: var(--Pink);
     text-align: center;
     justify-content: center;
-    margin-top:1fr;
+    margin-top:1em;
     margin-left:0%;
 }
 
 .firstStep h2{
     padding-top: .5em;
+    border-top: 1em;
     font-family: var(--font-heading);
 }
 
@@ -444,9 +435,24 @@ small a{
 
     /*----------Med Services Block----------*/
 
+nav h2{
+    display:none;
+}
+
+nav ul{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+nav a{
+    justify-content: space-evenly;
+    color:var(--Dark-gray);
+    padding:5px;
+}
+
     .ourServices{
         display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         column-gap: 20px;
     }
 
@@ -455,33 +461,20 @@ small a{
     }
 
     .ourServices h3{
-        grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column:1/3;
         margin-left: 0.5em;
         padding-bottom:1em;
     }
 
     .oneOnone{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        box-sizing:border-box;
-        width:250px;
-        height:325px;
-        margin-left:1em;
-        margin-bottom: 1em;
+        grid-column:1/2;
         background-color: var(--White);
         padding:20px;
         border-radius: 20px;
     }
 
     .careerCoaching{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        box-sizing:border-box;
-        width:250px;
-        height:325px;
-        margin-left:1em;
-        margin-bottom: 2em;
+        grid-column:2/3;
         background-color: var(--White);
         padding:20px;
         border-radius: 20px;
@@ -489,11 +482,8 @@ small a{
 
     .relationshipCoaching{
         grid-column:1/span 3;
-        box-sizing:border-box;
-        width:540px;
-        height:200px;
-        margin-left:1em;
-        margin-bottom: 1em;
+        
+       
         background-color: var(--White);
         padding:20px;
         border-radius: 20px;
@@ -501,38 +491,28 @@ small a{
         
     .groupCoaching{
         display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         column-gap: 20px;
     }
     
     .groupCoaching h3{
-        grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column:1/3;
         margin-left: 0.5em;
         padding-bottom:1em;
     }
 
     .supportCommunity{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        box-sizing:border-box;
-        width:250px;
-        height:325px;
+        grid-column:1/2;
         margin-left:1em;
-        margin-bottom: 1em;
         background-color: var(--White);
         padding:20px;
+        margin-bottom: 2em;
         border-radius: 20px;
 }
 
     .focusSessions{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        box-sizing:border-box;
-        width:250px;
-        height:325px;
+        grid-column:2/3;
         margin-left:1em;
-        margin-bottom: 2em;
         background-color: var(--White);
         padding:20px;
         border-radius: 20px;
@@ -545,8 +525,7 @@ small a{
     }
 
     .workShops h3{
-        grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column:1/3;
         margin-left: 0.5em;
         padding-bottom:1em;
     }
@@ -554,9 +533,6 @@ small a{
 
     .interactive{
         grid-column:1/span 3;
-        box-sizing:border-box;
-        width:540px;
-        height:230px;
         margin-left:1em;
         margin-bottom: 1em;
         background-color: var(--White);
@@ -565,8 +541,7 @@ small a{
     }
 
     .onlineCourses h3{
-        grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column:1/3;
         margin-left: 0.5em;
         padding-bottom:1em;
     }
@@ -574,9 +549,7 @@ small a{
 
     .flexLearning{
         grid-column:1/span 3;
-        box-sizing:border-box;
-        width:540px;
-        height:230px;
+        
         margin-left:1em;
         margin-bottom: 1em;
         background-color: var(--White);
@@ -591,7 +564,7 @@ small a{
     .whyChoose ul{
         display:grid;
         grid-template-columns:1fr 1fr 1fr 1fr;
-        grid-row:1/2;
+       margin-left:0;
         }
     
     
@@ -611,16 +584,20 @@ small a{
         grid-column:3/4;
         background-color: var(--Yellow);
         border-radius: 20px;
+        grid-row: 1/2;
     }
     
     #fl{
         grid-column:4/5;
         background-color: var(--White);
         border-radius: 20px;
+        grid-row: 1/2;
     }
 
+    /*----------Medium prices----------*/
+
     .prices{
-        margin-bottom:1fr;
+        margin-bottom:1em;
     }
     
     .sessionPrice{
@@ -648,6 +625,8 @@ small a{
         grid-row: 2/3;
     }
 
+    /*----------Med first step block----------*/
+
     .firstStep{
         display:grid;
         grid-template-columns: 1fr 1fr;
@@ -661,7 +640,7 @@ small a{
 
     .firstStep p{
         grid-column: 1/2;
-        align-self: left;
+       
         font-weight: bold;
     }
 
@@ -673,8 +652,113 @@ small a{
         box-shadow: 6px 6px 10px var(--Dark-gray);
        
     }
-
 }
 
+        /*----------large Media Query----------*/
+        /*----------_______________----------*/
 
+@media (min-width: 950px){
+    #servicesBlock{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+       
+    }
 
+    .ourServices h2{
+        grid-row: 1/2;
+    }
+
+    .ourServices h3{
+        grid-row: 2/3;
+    }
+
+    .oneOnone{
+        grid-column: 1/2;
+        
+    }
+
+    .careerCoaching{
+        grid-column: 1/2;
+    }
+
+    .careerCoaching h3{
+        grid-row:2/3;
+    }
+
+    .relationshipCoaching{
+        grid-column: 1/2;
+    }
+
+    .supportCommunity{
+        grid-column: 2/3;
+    }
+
+    .focusSessions{
+        grid-column: 2/3;
+    }
+
+    .workShops{
+        grid-column: 3/4;
+    }
+
+    .flexLearning{
+        grid-column: 4/5;
+    }
+
+/*----------Large price block----------*/
+
+    
+
+    .sessionPrice{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 1em;
+    }
+
+    #first{
+        grid-column:1/2;
+    }
+    
+    #first > table{
+        margin-left:2em;
+    }
+
+    #second{
+        grid-column: 2/3;
+    }
+
+    #second >table{
+        margin-left:2em;
+    }
+    
+
+    #third{
+        grid-column:3/4;
+        grid-row: 1/2;
+    }
+
+    #third >table{
+        margin-left:2em;
+    }
+
+    #fourth{
+        grid-column:4/5;
+        grid-row: 1/2;
+    }
+
+    #fourth >table{
+        margin-left:2em;
+    }
+   
+}
+
+    
+    /*----------XL Media Query----------*/
+        /*----------_______________----------*/
+       
+
+@media (min-width: 1280px){
+    body{
+        max-width:max-content;
+    }
+}
