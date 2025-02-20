@@ -398,6 +398,7 @@ td{
 .firstStep a{
     display: block;
     position:relative;
+    color:var(--Dark-gray);
     left: 6em;   
     background-color: var(--White);
     font-family: var(--font-family);
@@ -406,6 +407,11 @@ td{
     border-radius: 10px;
     text-decoration: none;
     width:50%;
+    box-shadow: 6px 6px 10px var(--Dark-gray);
+}
+
+.firstStep a:hover{
+    color:var(--Yellow);
 }
 
 /*----------Small Footer Block----------*/
@@ -652,8 +658,11 @@ nav a:hover{
     }
 
     .firstStep a{
+        display:block;
+        box-sizing: content-box;
+        height:2em;
+        width:300px;
         grid-column: 2/3;
-        height:50px;
         color:var(--Dark-gray);
         align-content: center;
         box-shadow: 6px 6px 10px var(--Dark-gray);
