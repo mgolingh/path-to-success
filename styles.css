@@ -74,10 +74,8 @@ table {
 /*----------GLOBAL STYLES (mobile first/small)----------*/
 
 h1{
-    font-family:var(--font-heading);
-    text-align: center;
-    font-size: var(--h1);
-    color:var(--White)
+    font-family: var(--font-heading);
+    font-size: var(--h1-size);
 }
 
 h2{
@@ -114,13 +112,16 @@ body{
     background-color: var(--Purple);
 }
 
-main {
-    justify-content:center;
-  
-  
-}
+
+
 
 /*----------Small Header/Nav Block----------*/
+
+header h1{
+    text-align: center;
+    color:var(--White)
+}
+
 
 header{
     display:block;
@@ -161,13 +162,10 @@ nav{
     right:0px; 
 }
 
-nav a visited{
-    color:var(--Lavender);
- }
-   
-nav a hover{
-    color:var(--White);
- }
+nav h2{
+    font-family: var(--font-heading);
+    font-size: var(--NAV-h2);
+}
 
 nav>ul{
     display:none;
@@ -282,7 +280,6 @@ nav>ul{
 /*----------Small Choice Block----------*/
 
 .whyChoose{
-    display:table-row;
     background-color:var(--Pink);
     padding:2em;
 } 
@@ -294,63 +291,46 @@ nav>ul{
 }
 
 .whyChoose ul{
+    display:grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-content: center;
+    column-gap: 1em;
+    row-gap: 1em;
     background-color:var(--Pink);
-    padding:10px;
     font-family: var(--font-family);
     font-weight: bold;
 }
 
 
 #pa{
-    float:left;
-    box-sizing:border-box;
-    width:175px;
-    height:100px;
+    grid-column: 1/2;
+    grid-row: 1/2;
     background-color:var(--Teal);
-    padding:20px;
-    margin-left:2em;
-    margin-bottom: 1em;
     border-radius: 20px;
-    gap:5px;
+    padding:2em;
 }
 
 #pr{
-    float:right;
-    box-sizing:border-box;
-    width:175px;
-    height:100px;
-    margin-right:2em;
-    margin-bottom: 1em;
+    grid-column:2/3;
+    grid-row:1/2;
     background-color: var(--Lavender);
-    padding:20px;
     border-radius: 20px;
+    padding:2em;
 }
 
 #su{
-    float:left;
-    box-sizing:border-box;
-    width:175px;
-    height:100px;
-    margin-left:2em;
-    margin-bottom: 1em;
+    grid-column: 1/2;
+    grid-row: 2/3;
     background-color: var(--Yellow);
-    padding:20px;
     border-radius: 20px;
+    padding:2em;
 }
 
 #fl{
-    float:right;
-    box-sizing:border-box;
-    width:175px;
-    height:100px;
-    margin-right:2em;
-    margin-bottom: 1em;
+    grid-column:2/3;
+    grid-row:2/3;
     background-color: var(--White);
-    padding:20px;
     border-radius: 20px;
+    padding:2em;
 }
 
 /*----------Small Prices Block----------*/
@@ -410,6 +390,8 @@ td{
     background-color: var(--Pink);
     text-align: center;
     justify-content: center;
+    margin-top:1fr;
+    margin-left:0%;
 }
 
 .firstStep h2{
@@ -479,8 +461,6 @@ small a{
         padding-bottom:1em;
     }
 
-
-
     .oneOnone{
         grid-column-start: 1;
         grid-column-end: 2;
@@ -492,7 +472,7 @@ small a{
         background-color: var(--White);
         padding:20px;
         border-radius: 20px;
-}
+    }
 
     .careerCoaching{
         grid-column-start: 2;
@@ -605,67 +585,64 @@ small a{
     }
 
     /*----------Med Why Choose us Block----------*/
-
-    .whyChoose{
-        display:grid;
-        grid-template-columns: 2fr 1fr 2fr 1fr;
-        align-content: space-between;
-        
-    }
-
-    .whyChoose h2{
-        grid-column-start: 1;
-        grid-column-end: 5;
-        
-    }
-
-
+    
     .whyChoose ul{
-        background-color:var(--Pink);
-        font-family: var(--font-family);
-        font-weight: bold;
-    }
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        }
     
     
     #pa{
-        grid-column-start: 1;
-        grid-column-end: 2;
-        width:150px;
-        height:75px;
-        box-sizing:border-box;
+       grid-column:1/2;
         background-color:var(--Teal);
         border-radius: 20px;
-        
     }
     
     #pr{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        width:100px;
-        height:75px;
-        box-sizing:border-box;
+        grid-column:2/3;
         background-color: var(--Lavender);
         border-radius: 20px;
     }
     
     #su{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        width:150px;
-        height:75px;
-        box-sizing:border-box;
+        grid-column:3/4;
         background-color: var(--Yellow);
         border-radius: 20px;
     }
     
     #fl{
-        grid-column-start: 4;
-        grid-column-end: 5;
-        width:100px;
-        height:75px;
-        box-sizing:border-box;
+        grid-column:4/5;
         background-color: var(--White);
         border-radius: 20px;
+    }
+
+    .prices{
+        margin-bottom:1fr;
+    }
+    
+    .sessionPrice{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #first{
+        grid-column:1/2;
+        grid-row: 1/2;
+    }
+
+    #second{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    #third{
+        grid-column:1/2;
+        grid-row: 2/3;
+    }
+
+    #fourth{
+        grid-column:2/3;
+        grid-row: 2/3;
     }
 
 }
